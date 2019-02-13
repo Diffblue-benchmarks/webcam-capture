@@ -1,0 +1,173 @@
+# Tested on Deeptest release 1.10.0
+cbmcArguments:
+  cover-function-only: false
+  depth: false
+  do-not-test-methods-with-access: [ private ]
+  java-generate-no-comments: true
+  no-trivial-tests: true
+  string-non-empty: true
+  string-printable: true
+units:
+  - target:
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/WebcamStreamer.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/WebcamStreamer.java
+  - target:
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/WebcamLock.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/WebcamLock.java
+  - target:
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/util/jh/JHNormalizeFilter.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/util/jh/JHNormalizeFilter.java
+  - target:
+    - dir: webcam-capture-drivers/driver-ffmpeg-cli/target/classes
+      file: com/github/sarxos/webcam/ds/ffmpegcli/FFmpegCliDriver.class
+      sourceDir: webcam-capture-drivers/driver-ffmpeg-cli/src/main/java
+      sourceFile: com/github/sarxos/webcam/ds/ffmpegcli/FFmpegCliDriver.java
+    # Child of FFmpegCliDriver.class
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/WebcamDevice.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/WebcamDevice.java
+    # Child of FFmpegCliDriver.class
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/WebcamDiscoverySupport.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/WebcamDiscoverySupport.java
+    # Child of FFmpegCliDriver.class
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/WebcamDriver.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/WebcamDriver.java
+    # Child of FFmpegCliDriver.class
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/WebcamException.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/WebcamException.java
+    # Child of FFmpegCliDriver.class
+    - dir: webcam-capture-drivers/driver-ffmpeg-cli/target/classes
+      file: com/github/sarxos/webcam/ds/ffmpegcli/impl/VideoDeviceFilenameFilter.class
+      sourceDir: webcam-capture-drivers/driver-ffmpeg-cli/src/main/java
+      sourceFile: com/github/sarxos/webcam/ds/ffmpegcli/impl/VideoDeviceFilenameFilter.java
+  - target:
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/WebcamProcessor.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/WebcamProcessor.java
+  - target:
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/util/jh/JHFlipFilter.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/util/jh/JHFlipFilter.java
+  - target:
+    - dir: webcam-capture-drivers/driver-lti-civil/target/classes
+      file: com/github/sarxos/webcam/ds/civil/LtiCivilDevice.class
+      sourceDir: webcam-capture-drivers/driver-lti-civil/src/main/java
+      sourceFile: com/github/sarxos/webcam/ds/civil/LtiCivilDevice.java
+  - target:
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/WebcamDiscoveryService.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/WebcamDiscoveryService.java
+  - target:
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/WebcamMotionDetectorDefaultAlgorithm.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/WebcamMotionDetectorDefaultAlgorithm.java
+    # Child of WebcamMotionDetectorDefaultAlgorithm.class
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/util/jh/JHBlurFilter.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/util/jh/JHBlurFilter.java
+    # Child of WebcamMotionDetectorDefaultAlgorithm.class
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/util/jh/JHGrayFilter.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/util/jh/JHGrayFilter.java
+  - target:
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/WebcamPanel.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/WebcamPanel.java
+  - target:
+    - dir: webcam-capture-drivers/driver-fswebcam/target/classes
+      file: com/github/sarxos/webcam/ds/fswebcam/FsWebcamDevice.class
+      sourceDir: webcam-capture-drivers/driver-fswebcam/src/main/java
+      sourceFile: com/github/sarxos/webcam/ds/fswebcam/FsWebcamDevice.java
+    # Child of FsWebcamDevice.class
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/WebcamExceptionHandler.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/WebcamExceptionHandler.java
+    # Child of FsWebcamDevice.class
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/WebcamResolution.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/WebcamResolution.java
+  - target:
+    - dir: webcam-capture-drivers/driver-gstreamer/target/classes
+      file: com/github/sarxos/webcam/ds/gstreamer/GStreamerDriver.class
+      sourceDir: webcam-capture-drivers/driver-gstreamer/src/main/java
+      sourceFile: com/github/sarxos/webcam/ds/gstreamer/GStreamerDriver.java
+  - target:
+    - dir: webcam-capture-drivers/driver-opencv/target/classes
+      file: com/github/sarxos/webcam/ds/javacv/JavaCvDriver.class
+      sourceDir: webcam-capture-drivers/driver-opencv/src/main/java
+      sourceFile: com/github/sarxos/webcam/ds/javacv/JavaCvDriver.java
+  - target:
+    - dir: webcam-capture-drivers/driver-gst1/target/classes
+      file: com/github/sarxos/webcam/ds/gst1/impl/GsUtils.class
+      sourceDir: webcam-capture-drivers/driver-gst1/src/main/java
+      sourceFile: com/github/sarxos/webcam/ds/gst1/impl/GsUtils.java
+  - target:
+    - dir: webcam-capture-drivers/driver-jmf/target/classes
+      file: com/github/sarxos/webcam/ds/jmf/JmfDevice.class
+      sourceDir: webcam-capture-drivers/driver-jmf/src/main/java
+      sourceFile: com/github/sarxos/webcam/ds/jmf/JmfDevice.java
+  - target:
+    - dir: webcam-capture-drivers/driver-lti-civil/target/classes
+      file: com/github/sarxos/webcam/ds/civil/LtiCivilLoader.class
+      sourceDir: webcam-capture-drivers/driver-lti-civil/src/main/java
+      sourceFile: com/github/sarxos/webcam/ds/civil/LtiCivilLoader.java
+  - target:
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/WebcamDriverUtils.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/WebcamDriverUtils.java
+  - target:
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/util/jh/JHGrayFilter.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/util/jh/JHGrayFilter.java
+  - target:
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/util/WebcamInitializer.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/util/WebcamInitializer.java
+  - target:
+    - dir: webcam-capture/target/classes
+      file: com/github/sarxos/webcam/util/jh/JHBlurFilter.class
+      sourceDir: webcam-capture/src/main/java
+      sourceFile: com/github/sarxos/webcam/util/jh/JHBlurFilter.java
+phases:
+-
+  timeout: 60
+  cbmcArguments:
+    java-assume-inputs-non-null: true
+    max-nondet-array-length: 10
+    unwind: 1
+-
+  timeout: 120
+  cbmcArguments:
+    max-nondet-array-length: 20
+    unwind: 2
+-
+  timeout: 180
+  cbmcArguments:
+    max-nondet-array-length: 30
+    max-nondet-string-length: 10
+    unwind: 3
